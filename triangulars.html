@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRESPI_MUNAR_PERE DWEC02 EX02</title>
+</head>
+<body>
+<h1>Pràctica tema 2</h1>
+<h2>Exercici 2 ( 3 punts)</h2>
+<p>Crea la pàgina <i>triangulars.html</i>. En    obrir-se aquesta pàgina ha de passar el següent:</p>
+<ol>
+    <li>
+        <p>(0,5 punts) Ha de demanar un nombre sencer a l’usuari, per exemple amb un <i>prompt</i>.
+            Ha de mostrar-lo a la consola.</p>
+        <div style="background-color: antiquewhite">
+        <pre>
+            <code>
+//Demanam a l'usuari que introdueixi un nombre sencer
+let sencer = prompt("Ingresa un nombre sencer!");
+//Mostram el nombre introduit per consola
+console.log("Nombre introduit: "+sencer);
+            </code>
+        </pre>
+        </div>
+    </li>
+    <li>
+        <p>(2,5 punts) Ha d’utilitzar una funció de
+            creació pròpia per comprovar si el nombre és triangular o no. Ha
+            d’indicar a la consola el resultat d’aquesta funció.</p>
+        <p>Un nombre triangular és el resultat de sumar els
+            n primers nombres naturals. S'anomenen d'aquesta manera perquè són
+            el nombre d'elements necessaris per crear un triangle equilàter.</p>
+        <p>Per comprovar si un nombre <i>x</i>
+            és triangular hem de trobar un valor <i>n</i>
+            tal que</p>
+        <p></p>
+
+        <p>1, 3, 6, 10, 15, 21, ... són nombres triangulars.</p>
+        <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+function esTriangular(sencer){
+    //Passam el nombre rebut com a String a int
+    let i = parseInt(sencer);
+    //Cream una variable boleana per definir si es triangular
+    let bolea = false;
+    //Bucle per cercar si correspon el nombre donat amb els nombres triangulars
+    for(let b = 1; b < i; b++){
+        //Algorisme per comprovar triangular i mostram el resultat
+        let resultat = b*(b+1)/2;
+        //Mostram cada un dels resultats del bucle
+        console.log("Resultat: "+ resultat);
+        //Si hi ha coincidencia aturam el bucle i canviam el bolea a true
+        if(i === resultat){
+            bolea = true;
+            break;
+        //Si el resultat del bucle es major al nombre facilitat aturam el bucle
+        }else if(resultat > i){
+        break;
+        }
+    }
+    //Si el bolea es true
+    if(bolea){
+        console.log("El nombre " + i + " SI es triangular");
+    //si el bolea es false
+    }else{
+    console.log("El nombre " + i + " No es triangular")
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </li>
+</ol>
+
+
+
+  <script type="text/javascript">
+  //Demanam a l'usuari que introdueixi un nombre sencer
+    let sencer = prompt("Ingresa un nombre sencer!");
+  //Mostram el nombre introduit per consola
+    console.log("Nombre introduit: "+sencer);
+    //Funcio per determinar si es triangular
+    function esTriangular(sencer){
+        //Passam el nombre rebut com a String a int
+        let i = parseInt(sencer);
+        //Cream una variable boleana per definir si es triangular
+        let bolea = false;
+        //Bucle per cercar si correspon el nombre donat amb els nombres triangulars
+        for(let b = 1; b < i; b++){
+            //Algorisme per comprovar triangular i mostram el resultat
+            let resultat = b*(b+1)/2;
+            //Mostram cada un dels resultats del bucle
+            console.log("Resultat: "+ resultat);
+            //Si hi ha coincidencia aturam el bucle i canviam el bolea a true
+            if(i === resultat){
+               bolea = true;
+               break;
+           //Si el resultat del bucle es major al nombre facilitat aturam el bucle
+            }else if(resultat > i){
+                break;
+            }
+        }
+        //Si el bolea es true
+        if(bolea){
+            console.log("El nombre " + i + " SI es triangular");
+        //si el bolea es false
+        }else{
+            console.log("El nombre " + i + " No es triangular")
+        }
+
+    }
+    esTriangular(sencer);
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRESPI_MUNAR_PERE DWEC02 EX01</title>
+</head>
+<body>
+<h1>Pràctica tema 2</h1>
+<h2> Exercici 1 (3 punts)</h2>
+<p>Crea la pàgina <i>arrays.html</i>. Has de fer les    següent operacions amb arrays:</p>
+<ol>
+    <li>
+        <p>(0,5 punts) Defineix un array amb 4 valors
+            qualsevol i afegeix després de crear-lo un valor a la posició 33.
+        </p>
+        <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+//Cream l'array i definim 4 valors
+const array=[1,2,3,4];
+
+//afegim a la posicio 33 ( 32 a l'index de l'array ) un valor
+array[32]=33;
+
+//comprovam que s'ha afegit correctament
+console.log("--- Array amb valor a la posicio 33 ---")
+console.log(array);
+                </code>
+            </pre>
+        </div>
+    </li>
+    <li>
+        <p>(1 punt) Mostra per consola el contingut de
+            totes les posicions de l’array.</p>
+        <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+console.log("--- Tots els elements de l'array ---")
+for(let i=0; i < array.length; i++) {
+    console.log(i+1+':'+array[i]);
+}
+                </code>
+            </pre>
+        </div>
+    </li>
+    <li>
+        <p>(1,5 punts) Mostra pe consola el contingut
+            d’aquelles posicions de l’array que tenen un valor assignat.</p>
+
+        <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+//Mostram per consola els elements de l'array que tenen valor assignat
+console.log("--- Elements de l'array amb valor assignat ---")
+for(let i=0; i < array.length; i++) {
+    if(array[i] !== undefined){
+    console.log(i+1+':'+array[i]);
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </li>
+</ol>
+<script type="text/javascript">
+    //Cream l'array i definim 4 valors
+    const array=[1,2,3,4];
+    //afegim a la posicio 33 ( 32 a l'index de l'array ) un valor
+    array[32]=33;
+    //comprovam que s'ha afegit correctament
+    console.log("--- Array amb valor a la posicio 33 ---")
+    console.log(array);
+    //Mostram per consola tots els elements de l'array
+    console.log("--- Tots els elements de l'array ---")
+    for(let i=0; i<array.length; i++) {
+        console.log(i+1+':'+array[i]);
+    }
+    //Mostram per consola els elements de l'array que tenen valor assignat
+    console.log("--- Elements de l'array amb valor assignat ---")
+    for(let i=0; i<array.length; i++) {
+        if(array[i] !== undefined){
+            console.log(i+1+':'+array[i]);
+        }
+    }
+</script>
+</body>
+</html>

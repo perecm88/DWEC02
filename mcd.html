@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <title>CRESPI_MUNAR_PERE DWEC02 EX03</title>
+
+
+
+</head>
+<body>
+<h2>Exercici 3 ( 4    punts)</h2>
+<ol>
+    <li>
+        <p>(2 punts) Crea el fitxer mcd.js amb una
+            funció recursiva que calculi el màxim comú divisor de dos nombres
+            amb una funció recursiva seguint el següent algorisme:</p>
+        <p>mcd(x, y) és</p>
+    </li>
+</ol>
+<ul>
+    <ul>
+    <li>
+        <p>x si y=0</p>
+    </li>
+    <li>
+        <p>el resultat de calcular el mcd de y i el
+            reste de la divisió sencera de x entre y</p>
+    </li>
+    <li>
+        <p>Exporta aquesta funció.</p>
+    </li>
+        <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+let mcd = (x, y) => {
+    if (y === 0) return x;
+    return mcd(y, x % y);
+};
+export {mcd};
+                </code>
+            </pre>
+        </div>
+    </ul>
+</ul>
+<ol start="2">
+    <li>
+        <p>(2 punt) Crea la pàgina <i>mcd.html</i>. En obrir aquesta pàgina ha
+            de passar el següent:</p>
+    </li>
+</ol>
+<ul>
+    <ul>
+        <li>
+            <p>Ha de demanar dos nombres sencers a l’usuari, per exemple amb <i>prompt</i></p>
+            <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+let x = parseInt(prompt("Ingresa el primer numero sencer"));
+let y = parseInt(prompt("Ingresa el segon numero sencer"));
+
+                </code>
+            </pre>
+            </div>
+        </li>
+        <li>
+            <p>Ha de mostrar-los a la consola.</p>
+            <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+console.log("El primer nombre introduït es: "+ x);
+console.log("El segon nombre introduït es: "+ y);
+                </code>
+            </pre>
+            </div>
+        </li>
+        <li>
+            <p>Ha d’importar la funció de l’exercici
+                anterior i utilitzar-la per calcular el mcd del dos sencers.</p>
+            <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+< script type="module">
+        import {mcd} from "./mcd.js";
+        let resultat = mcd(x,y);
+< /script>
+                </code>
+            </pre>
+            </div>
+        </li>
+        <li>
+            <p>Ha de mostrar el resultat a la consola.</p>
+            <div style="background-color: antiquewhite">
+            <pre>
+                <code>
+console.log(`El maxim comu divisor de ${x} i ${y} es : ${resultat}`);
+                </code>
+            </pre>
+            </div>
+        </li>
+    </ul>
+</ul>
+
+<script type="module">
+
+    import {mcd} from "./mcd.js";
+    let x = parseInt(prompt("Ingresa el primer numero sencer"));
+    console.log("El primer nombre introduït es: "+ x);
+    let y = parseInt(prompt("Ingresa el segon numero sencer"));
+    console.log("El segon nombre introduït es: "+ y);
+    let resultat = mcd(x,y);
+
+    console.log(`El maxim comu divisor de ${x} i ${y} es : ${resultat}`);
+</script>
+</body>
+</html>
